@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kimsorara/animalForest.git/static/css/main.16eff499.css",
+    "main.js": "/kimsorara/animalForest.git/static/js/main.3551cdcf.js",
+    "static/js/787.28cb0dcd.chunk.js": "/kimsorara/animalForest.git/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/kimsorara/animalForest.git/index.html",
+    "main.16eff499.css.map": "/kimsorara/animalForest.git/static/css/main.16eff499.css.map",
+    "main.3551cdcf.js.map": "/kimsorara/animalForest.git/static/js/main.3551cdcf.js.map",
+    "787.28cb0dcd.chunk.js.map": "/kimsorara/animalForest.git/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.16eff499.css",
+    "static/js/main.3551cdcf.js"
+  ]
+}
