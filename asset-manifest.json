@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/animalForest/static/css/main.92036ca5.css",
-    "main.js": "/animalForest/static/js/main.c18a7e08.js",
+    "main.css": "/animalForest/static/css/main.e684879f.css",
+    "main.js": "/animalForest/static/js/main.185f2b10.js",
     "static/js/787.28cb0dcd.chunk.js": "/animalForest/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/animalForest/index.html",
-    "main.92036ca5.css.map": "/animalForest/static/css/main.92036ca5.css.map",
-    "main.c18a7e08.js.map": "/animalForest/static/js/main.c18a7e08.js.map",
+    "main.e684879f.css.map": "/animalForest/static/css/main.e684879f.css.map",
+    "main.185f2b10.js.map": "/animalForest/static/js/main.185f2b10.js.map",
     "787.28cb0dcd.chunk.js.map": "/animalForest/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.92036ca5.css",
-    "static/js/main.c18a7e08.js"
+    "static/css/main.e684879f.css",
+    "static/js/main.185f2b10.js"
   ]
 }
