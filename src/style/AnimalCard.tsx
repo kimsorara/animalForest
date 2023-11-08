@@ -4,28 +4,49 @@ import { faMarsStrokeUp } from "@fortawesome/free-solid-svg-icons";
 import { faVenus } from "@fortawesome/free-solid-svg-icons";
 import { monthConvert } from "../utill/monthConvert";
 import QRCode from "react-qr-code";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import LoadingSpiner from "../style/LoadingSpiner";
 type Info = {
   data: AnimalInfo[];
 };
 
 const AnimalCard = ({ data }: Info) => {
   const [showQR, setShowQR] = useState<number>(-1);
+
   const convertClass = (
     e: React.MouseEvent<HTMLButtonElement>,
     index: number
   ) => {
     e.preventDefault();
-
-    setShowQR((pre) => index); // 'showQR' 상태를 토글하여 QR 코드를 보이거나 숨기도록 합니다.
+    setShowQR((pre) => index);
   };
+
+  const imgRef = useRef<HTMLImageElement>(null);
+  const [isImgLoaded, setIsImgLoaded] = useState(false);
+  useEffect(() => {
+    const imgLoadHandler = () => {
+      setIsImgLoaded(true);
+    };
+
+    if (imgRef.current && !isImgLoaded) {
+      imgRef.current.addEventListener("load", imgLoadHandler);
+    }
+
+    return () => {
+      if (imgRef.current) {
+        imgRef.current.removeEventListener("load", imgLoadHandler);
+      }
+    };
+  }, [imgRef, isImgLoaded]);
+
   return (
     <div className="animal-card">
+      {!isImgLoaded && <LoadingSpiner />}
       {data.map((item, index) => (
         <div className="animal-frame" key={item.name}>
           <div className="img-area">
             <div className="inner-area">
-              <img src={item.image_url} alt={item.name} />
+              <img src={item.image_url} alt={item.name} ref={imgRef} />
             </div>
           </div>
           <div className="description">
