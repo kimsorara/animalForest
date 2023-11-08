@@ -39,14 +39,14 @@ span {
 
 .header {
   margin: 3rem;
-  font-size: var(--font-large);
+  font-size: var(--font-small);
   border-bottom: 4px solid var(--border-line);
   padding-bottom: 15px;
   position: relative;
 }
 .header svg {
   color: #186f65;
-  margin-left: 2rem;
+  margin-left: 0.8rem;
 }
 .header:before {
   content: " ";
@@ -72,7 +72,7 @@ span {
 .header span {
   position: relative;
   top: 10px;
-  margin: 0 4px;
+  margin: 0 2px;
   display: inline-block;
   animation: bounce 0.8s ease-in 5 alternate;
   text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
@@ -234,8 +234,8 @@ span {
 }
 .animal-back {
   position: absolute;
-  font-size: var(--font-large);
-  top: -2rem;
+  font-size: var(--font-small);
+  top: -1.4rem;
   left: 18%;
 }
 .animal-back:hover,
@@ -255,7 +255,7 @@ span {
 .cartegory {
   border-radius: var(--radius);
   margin: 5rem auto;
-  width: 50%;
+  width: 80%;
   height: 18rem;
   box-shadow: var(--box-shadow);
   max-width: 280px;
@@ -353,23 +353,22 @@ span {
 }
 /*psychological*/
 .test-card {
-  width: 70%;
+  width: 90%;
   margin: 5rem auto;
   box-shadow: var(--box-shadow);
   border-radius: var(--radius);
   padding: 2rem;
 }
 .test-title {
-  font-size: var(--font-middle);
+  font-size: var(--font-small);
   margin: 1rem 0;
 }
 .test-body {
-  font-size: var(--font-small);
+  font-size: calc(var(--font-small)-1px);
   margin: 1rem 0;
 }
 .swiper {
   width: 80%;
-  height: 60vh;
   padding: 2rem;
 }
 
@@ -385,14 +384,41 @@ span {
   color: #192655 !important;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
+  .header {
+    font-size: var(--font-large);
+  }
+  .header svg {
+    margin-left: 2rem;
+  }
+  .header span {
+    margin: 0 4px;
+  }
   .animal-card {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
   .animal-back {
+    font-size: var(--font-large);
     top: -1rem;
-    left: 8%;
+    left: 10%;
+  }
+  .cartegory {
+    width: 50%;
+  }
+  .swiper {
+    height: 60vh;
+  }
+
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    bottom: 40px;
+  }
+  .test-title {
+    font-size: var(--font-middle);
+  }
+  .test-body {
+    font-size: var(--font-small);
   }
 }

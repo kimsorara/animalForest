@@ -8,8 +8,8 @@
   flex-direction: column;
   color: white;
   margin: 27% auto;
-  width: 280px;
-  height: 280px;
+  width: 200px;
+  height: 200px;
   background-color: #0079ff;
   border-radius: 96% 32% 7% 7% / 100% 11% 10% 10%;
   box-shadow: rgb(174, 226, 255, 0.4) 5px 5px, rgb(174, 226, 255, 0.3) 10px 10px,
@@ -20,8 +20,8 @@
 }
 .card_img_wrap {
   position: absolute;
-  width: 180px;
-  height: 210px;
+  width: 100px;
+  height: 140px;
   top: -30%;
   transition: 1s all;
 }
@@ -35,4 +35,17 @@
 }
 .info-wrap {
   padding: 1rem;
+}
+@media (min-width: 800px) {
+  .card {
+    width: 280px;
+    height: 280px;
+  }
+  .card_img_wrap {
+    position: absolute;
+    width: 180px;
+    height: 210px;
+    top: -30%;
+    transition: 1s all;
+  }
 }
